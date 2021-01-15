@@ -1,0 +1,179 @@
+﻿@model StudentsDataSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Edytuj dane studenta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<header>
+    <h3>Edytuj dane studenta: @Html.DisplayFor(model => model.names) @Html.DisplayFor(model => model.surname)</h3>
+</header>
+<hr />
+<br />
+<br />
+@if (@TempData["Message"] != null)
+{
+    <p class="text-success">
+        @TempData["Message"]
+    </p>
+}
+<form asp-action="Edit">
+    @Html.AntiForgeryToken()
+    <div class="row justify-content-center">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="id" />
+        <div class="col-md-4">
+            <label asp-for="names" class="control-label"></label>
+            <input asp-for="names" class="form-control" />
+            <span asp-validation-for="names" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="surname" class="control-label"></label>
+            <input asp-for="surname" class="form-control" />
+            <span asp-validation-for="surname" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <label asp-for="dateOfBirth" class="control-label"></label>
+            <input asp-for="dateOfBirth" class="form-control" />
+            <span asp-validation-for="dateOfBirth" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="placeOfBirth" class="control-label"></label>
+            <input asp-for="placeOfBirth" class="form-control" />
+            <span asp-validation-for="placeOfBirth" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <label asp-for="studentAddress" class="control-label"></label>
+            <input asp-for="studentAddress" class="form-control" />
+            <span asp-validation-for="studentAddress" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="pesel" class="control-label"></label>
+            <input asp-for="pesel" class="form-control" />
+            <span asp-validation-for="pesel" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <label asp-for="phoneNumber" class="control-label"></label>
+            <input asp-for="phoneNumber" class="form-control" />
+            <span asp-validation-for="phoneNumber" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="email" class="control-label"></label>
+            <input asp-for="email" class="form-control" />
+            <span asp-validation-for="email" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div>
+                <label asp-for="studiesType" class="control-label"></label>
+            </div>
+            <div class="radio-inline">
+                <input class="control-input m-1" type="radio" id="stype1" asp-for="studiesType" value="stacjonarne" />
+                <label class="control-label mt-1" for="stype1">stacjonarne</label>
+                <input class="control-input m-1" type="radio" id="stype2" asp-for="studiesType" value="niestacjonarne" />
+                <label class="control-label mt-1" for="stype2">niestacjonarne</label>
+                <span asp-validation-for="studiesType" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div>
+                <label asp-for="degree" class="control-label"></label>
+            </div>
+            <div>
+                <select asp-for="degree" class="form-control">
+                    <option>I</option>
+                    <option>II</option>
+                    <option>III</option>
+                </select>
+                <span asp-validation-for="studiesType" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <label asp-for="fieldOfStudy" class="control-label"></label>
+            <input asp-for="fieldOfStudy" class="form-control" />
+            <span asp-validation-for="fieldOfStudy" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="specialization" class="control-label"></label>
+            <input asp-for="specialization" class="form-control" />
+            <span asp-validation-for="specialization" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div>
+                <label asp-for="semester" class="control-label"></label>
+            </div>
+            <select asp-for="semester" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <span asp-validation-for="semester" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="studentsGroup" class="control-label"></label>
+            <input asp-for="studentsGroup" class="form-control" />
+            <span asp-validation-for="studentsGroup" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <label asp-for="studentIdNumber" class="control-label"></label>
+            <input asp-for="studentIdNumber" class="form-control" />
+            <span asp-validation-for="studentIdNumber" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="scholarship" class="control-label"></label>
+            <input asp-for="scholarship" class="form-control" />
+            <span asp-validation-for="scholarship" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <input id="b1" type="submit" value="Zapisz" class="btn btn-primary" />
+    </div>
+</form>
+<br />
+<div>
+    <form>
+        <a id="links" asp-action="Index">
+            <img class="mb-2 mr-2" src="~/css/images/back.png" width="35" height="35" />
+            Powrót do listy
+        </a>
+    </form>
+</div>
+<br />
+<br />
+<br />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

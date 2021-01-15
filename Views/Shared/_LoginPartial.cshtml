@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a id="navtext" class="nav-link text-dark mr-5" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+            <img src="~/css/images/account.png" width="35" height="35" class="mr-2" /> Moje konto
+        </a>
+    </li>
+    <li class="nav-item">
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button id="navtext" type="submit" class="nav-link btn btn-link text-dark" >
+            <img  src="~/css/images/logout.png" width="35" height="35" class=" mr-2" />Wyloguj się</button>
+        </form>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a id="navtext" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">
+            <img src="~/css/images/adduser.png" width="35" height="35" class="mr-2 ml-5" />Zarejestruj się</a>
+    </li>
+    <li class="nav-item">
+        <a id="navtext" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">
+        <img src="~/css/images/login.png" width="35" height="35" class="mr-2" />Zaloguj się</a>
+    </li>
+}
+</ul>

@@ -1,0 +1,20 @@
+﻿@model int
+
+@{
+    ViewBag.Title = "404 Error";
+}
+<br />
+<br />
+<div class="alert alert-danger mt-1 mb-1">
+    <h4>404 Not Found Error: </h4>
+    <hr />
+    <h5>
+        Podana strona nie istnieje - brak encji w bazie o podanym ID.
+    </h5>
+</div>
+<br />
+<br />
+<a id="links" asp-action="Index">
+    <img class="mb-2 mr-2" src="~/css/images/back.png" width="35" height="35" />
+    Powrót do listy
+</a>

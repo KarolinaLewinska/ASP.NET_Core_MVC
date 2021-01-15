@@ -1,0 +1,132 @@
+﻿@model StudentsDataSystem.Models.Student
+
+@{
+    ViewData["Title"] = "Usuń dane studenta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <br />
+    <header>
+        <h3 id="headerLeft">Usuń dane studenta: @Html.DisplayFor(model => model.names) @Html.DisplayFor(model => model.surname)</h3>
+    </header>
+    <br />
+    <h5 id="h5" >Czy na pewno chcesz usunąć dane studenta?</h5>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.names)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.names)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.surname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.surname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.dateOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.dateOfBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.placeOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.placeOfBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.studentAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.studentAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pesel)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pesel)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.phoneNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.phoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.studiesType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.studiesType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.degree)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.degree)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.fieldOfStudy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fieldOfStudy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.specialization)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.specialization)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.semester)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.semester)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.studentsGroup)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.studentsGroup)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.studentIdNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.studentIdNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.scholarship)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.scholarship)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input id="b2" type="submit" value="Usuń" class="btn btn-primary" />
+
+    </form>
+    <br />
+    <div>
+        <form>
+            <a id="links" asp-action="Index">
+                <img class="mb-2 mr-2" src="~/css/images/back.png" width="35" height="35" />
+                Powrót do listy
+            </a>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+<br />

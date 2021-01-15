@@ -1,0 +1,177 @@
+﻿@model Paging<StudentsDataSystem.Models.Student>
+
+@{
+    ViewData["Title"] = "Lista studentów";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
+    <h1 class="mb-4 mt-5">Lista studentów</h1>
+</header>
+
+@if (@TempData["Message"] != null)
+{
+    <p class="text-success font-weight-bold">
+        @TempData["Message"]
+    </p>
+ }  
+
+@if (ViewBag.Message != null)
+{
+    <p class="text-success">
+        @ViewBag.Message
+    </p>
+ }
+<section>
+    @using (Html.BeginForm("Index", "Students", FormMethod.Get))
+    {
+
+        <div class="form-group">
+            <div>
+                <h5>Wyszukaj według:</h5>
+            </div>
+            <br />
+            <fieldset>
+                <div class="radio-inline" id="rbuttons">
+                    @Html.RadioButton("searchBy", "surname", true) <text class="ml-2">Nazwisko</text>
+                    @Html.RadioButton("searchBy", "stype", false, new { @class = "ml-4" })<text class="ml-2">Tryb</text>
+                    @Html.RadioButton("searchBy", "degree", false, new { @class = "ml-4" })<text class="ml-2">Stopień</text>
+                    @Html.RadioButton("searchBy", "field", false, new { @class = "ml-4" })<text class="ml-2">Kierunek<text>
+                    @Html.RadioButton("searchBy", "specialization", false, new { @class = "ml-4" })<text class="ml-2">Specjalizacja</text>
+                    @Html.RadioButton("searchBy", "semester", false, new { @class = "ml-4" })<text class="ml-2">Semestr</text>
+                    @Html.RadioButton("searchBy", "group", false, new { @class = "ml-4" })<text class="ml-2">Grupa</text>
+                    @Html.RadioButton("searchBy", "studentIndex", false, new { @class = "ml-4" })<text class="ml-2">Numer indeksu</text>
+                </div>
+            </fieldset>
+            <section>
+                <br />
+                <div class="form-inline">
+                    @Html.TextBox("search", null, new { @class = "form-control" }) <input type="submit" value="Wyszukaj" class="btn btn-primary ml-3" />
+
+                    <a href="@Url.Action("Index")">
+                        <img src="~/css/images/removeFilter.png" width="50" height="50" class="ml-3" />
+                    </a>
+                </div>
+            </section>
+        </div>
+     }
+</section>
+<section>
+    <table class="table table-hover text-center">
+        <thead>
+            <tr>
+                <th>
+                    @Html.ActionLink("Imiona", "Index", "Students", new { sortBy = ViewBag.sortByNames }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Nazwisko", "Index", "Students", new { sortBy = ViewBag.sortBySurname }, new { style = "color: white" })
+
+                </th>
+                <th>
+                    @Html.ActionLink("Tryb", "Index", "Students", new { sortBy = ViewBag.sortBysType }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Stopień", "Index", "Students", new { sortBy = ViewBag.sortByDegree }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Kierunek", "Index", "Students", new { sortBy = ViewBag.sortByField }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Specjalizacja", "Index", "Students", new { sortBy = ViewBag.sortBySpecialization }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Semestr", "Index", "Students", new { sortBy = ViewBag.sortBySemester }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Grupa", "Index", "Students", new { sortBy = ViewBag.sortByGroup }, new { style = "color: white" })
+                </th>
+                <th>
+                    @Html.ActionLink("Index", "Index", "Students", new { sortBy = ViewBag.sortByIndex }, new { style = "color: white" })
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count() == 0)
+            {
+                <tr>
+                    <td id="noResults" colspan="9" class="text-center font-weight-bold text-danger"> Brak pasujących danych w bazie</td>
+                </tr>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.names)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.surname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.studiesType)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.degree)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fieldOfStudy)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.specialization)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.semester)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.studentsGroup)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.studentIdNumber)
+                        </td>
+
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.id">
+                                <img src="~/css/images/details.jpg" width="18" height="18" class="ml-2" />
+                            </a>
+                            <a asp-action="Edit" asp-route-id="@item.id">
+                                <img src="~/css/images/edit.png" width="16" height="16" class="ml-2" />
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.id">
+                                <img src="~/css/images/delete.png" width="25" height="25" class="ml-1" />
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</section>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<section>
+    <div class="d-flex justify-content-center">
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewBag.CurrentSort"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewBag.CurrentFilter"
+           class="btn btn-default @prevDisabled">
+            <img src="~/css/images/arrowl.png" width="50" height="50" />
+        </a>
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewBag.CurrentSort]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewBag.CurrentFilter"
+           class="btn btn-default @nextDisabled">
+            <img src="~/css/images/arrowr.png" width="50" height="50" />
+        </a>
+    </div>
+</section>
+<br /><br />
+
+
+
