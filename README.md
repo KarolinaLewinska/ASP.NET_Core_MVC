@@ -8,7 +8,7 @@ In order to create some functionalities in this project we used Microsoft Tutori
 **Database first project (Microsoft SQL Server Management Studio)** <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of **Scaffolding** in order to generate basic CRUD operations.<br />
-**Client side validation of model (Models/Student.cs):**<br />
+- **Client side validation of model (Models/Student.cs):**<br />
 ![validation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel.PNG)<br />
 ![validation2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel2.PNG)<br />
 ![validation3](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel3.PNG)<br />
