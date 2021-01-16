@@ -62,22 +62,22 @@ Adding Identity Configurations in **Sartup.cs**:<br />
 - **Cross-Site Request Forgery security (AntiForgeryToken attribute)**<br />
 
 **Views results:**<br />
-**Index.cshml**<br />
+**- Index.cshml**<br />
 ![IndexView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/IndexView.PNG)<br />
 
-**Create.cshtml**<br />
+**- Create.cshtml**<br />
 ![CreateView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/CreateView.PNG)<br />
 
-**Edit.cshtml**<br />
+**- Edit.cshtml**<br />
 ![EditView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/EditView.PNG)<br />
 
-**Details.cshtml**
+**- Details.cshtml**
 ![DetailsView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/DetailsView.PNG)<br />
 
-**Delete.cshtml**<br />
+**- Delete.cshtml**<br />
 ![DeleteView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/DeleteView.PNG)<br />
 
-**Index.cshtml (HomeController) – showing after logout from system**<br />
+**- Index.cshtml (HomeController) – showing after logout from system**<br />
 ![LogoutView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/logoutPage.PNG)<br />
 
 
