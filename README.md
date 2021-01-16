@@ -27,7 +27,7 @@ Adding Identity Configurations in **Sartup.cs**:<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
 - **login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
-**StudentsController:**<br />
+**- StudentsController:**<br />
 - Authorize attribute to unable access without authentication,<br />
 
 **- Index Action (GET):**<br />
