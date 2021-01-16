@@ -28,7 +28,7 @@ In order to create some functionalities in this project we used Microsoft Tutori
 **- login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 - **StudentsController:**<br />
-- Authorize attribute to unable access without authentication,<br />
+-Authorize attribute to unable access without authentication,<br />
 
 **- Index Action (GET):**<br />
 - sorting, filtering, paging (**Paging.cs**) functionalities,<br />
