@@ -28,15 +28,15 @@ In order to create some functionalities in this project we used Microsoft Tutori
 **- login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 - **StudentsController:**<br />
--Authorize attribute to unable access without authentication,<br />
+**-Authorize attribute** to unable access without authentication,<br />
 
-**- Index Action (GET):**<br />
+- **Index Action (GET):**<br />
 - sorting, filtering, paging (**Paging.cs**) functionalities,<br />
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br />
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
 - session variable informing about previously added/edited/deleted student’s data (depending on previous CRUD operation).<br />
 
-**- Create Action (POST):**<br />
+- **Create Action (POST):**<br />
 - server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
 ![serverValidation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/serverValidation.PNG)<br />
 - information via TempData about successfully added student’s data,<br />
@@ -44,24 +44,24 @@ In order to create some functionalities in this project we used Microsoft Tutori
 - try-catch error handling with dedicated pages for error 404.<br />
 ![errorsViews](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/errorView.PNG)<br />
 
-**- Edit Action (POST):**<br />
+- **Edit Action (POST):**<br />
 - server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
 - information via TempData about successfully edited student’s data,<br />
 - session variable informing about previously edited student’s data,<br />
 - try-catch error handling with dedicated pages for error 404.<br />
 
-**- Delete Action (POST):**<br />
+- **Delete Action (POST):**<br />
 - information via TempData about successfully deleted student’s data (visible on Index page),<br />
 - try-catch error handling with dedicated pages for error 404.<br />
 
-**HTTP statuses and session configuration in Startup.cs:**<br />
+- **HTTP statuses and session configuration in Startup.cs:**<br />
 ![httpSessionConfig](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/httpSessConfig.PNG)<br />
 ![httpSessionConfig2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/httpSessConfig2.PNG)<br />
 - **Created own CSS style (master.css)**<br />
 
 - **Cross-Site Request Forgery security (AntiForgeryToken attribute)**<br />
 
-**Views results:**<br />
+- **Views results:**<br />
 **- Index.cshml**<br />
 ![IndexView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/IndexView.PNG)<br />
 
