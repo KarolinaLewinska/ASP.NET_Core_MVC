@@ -16,18 +16,18 @@ In order to create some functionalities in this project we used Microsoft Tutori
 **- Results:**<br />
 ![validationResult](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult.PNG)<br />
 ![validationResult2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult2.PNG)<br />
-Adjusted **range validator class** for a date of Birth entity in the model (**rangeValidator.cs**):<br />
+- Adjusted **range validator class** for a date of Birth entity in the model (**rangeValidator.cs**):<br />
 ![rangeValidator](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/rangeValidator.PNG)<br />
-Generating authentication DB via Package Console:<br />
+- Generating authentication DB via Package Console:<br />
 ![authCommand](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authCommand.PNG)<br />
-Adding Identity Configurations in **Sartup.cs**:<br />
+- Adding Identity Configurations in **Sartup.cs**:<br />
 ![AuthConfig](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authConfig.PNG)<br />
-**- Results (with validation):**<br />
-- **register and my account views:**<br />
+- **Results (with validation):**<br />
+**- register and my account views:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
-- **login view:**<br />
+**- login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
-**- StudentsController:**<br />
+- **StudentsController:**<br />
 - Authorize attribute to unable access without authentication,<br />
 
 **- Index Action (GET):**<br />
