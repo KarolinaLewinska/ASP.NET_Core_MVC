@@ -6,7 +6,7 @@ In order to create some functionalities in this project we used Microsoft Tutori
 **Framwork:** .NET Core<br />
 **Language:** C#<br />
 **Database first project** <br />
-Zdj bazy
+![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 Usage of **Scaffolding** in order to generate basic CRUD operations.<br />
 **Client side validation of model (Models/Student.cs):**<br />
 Obrazki az do modelValidation result
