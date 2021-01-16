@@ -22,10 +22,10 @@ Generating authentication DB via Package Console:<br />
 ![authCommand](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authCommand.PNG)<br />
 Adding Identity Configurations in **Sartup.cs**:<br />
 ![AuthConfig](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authConfig.PNG)<br />
-**Results (with validation):**
-- **register and my account views:**
+**Results (with validation):**<br />
+- **register and my account views:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
-- **login view:**
+- **login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 **StudentsController:**<br />
 - Authorize attribute to unable access without authentication,<br />
