@@ -32,8 +32,8 @@ In order to create some functionalities in this project we used Microsoft Tutori
 
 - **Index Action (GET):**<br />
 **- sorting, filtering** functionalities:<br />
-![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br />
-**- paging (**Paging.cs**)** functionality:<br />
+![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
+**- paging (**Paging.cs**)** functionality:<br /><br />
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
 - session variable informing about previously added/edited/deleted student’s data (depending on previous CRUD operation).<br />
 
