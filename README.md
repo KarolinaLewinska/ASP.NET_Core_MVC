@@ -5,11 +5,17 @@ In order to create some functionalities in this project we used Microsoft Tutori
 **Architecture:** MVC<br />
 **Framwork:** .NET Core<br />
 **Language:** C#<br />
-**Database first project** <br />
+**Database first project (Microsoft SQL Server Management Studio)** <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 Usage of **Scaffolding** in order to generate basic CRUD operations.<br />
 **Client side validation of model (Models/Student.cs):**<br />
-Obrazki az do modelValidation result
+![validation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel.PNG)<br />
+![validation2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel2.PNG)<br />
+![validation3](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel3.PNG)<br />
+![validation4](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel4.PNG)<br />
+**Results:**
+![validationResult](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult.PNG)<br />
+![validationResult2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult2.PNG)<br />
 Adjusted **range validator class** for a date of Birth entity in the model (**rangeValidator.cs**):<br />
 rangeValidator
 Generating authentication DB via Package Console:<br />
