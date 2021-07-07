@@ -1,17 +1,11 @@
 # ASP.NET Core MVC
 System for managing students’ fictional personal data.<br />
-**Project created by:** [Karolina Lewińska](https://github.com/KarolinaLewinska), [Justyna Gapys](https://github.com/justynagapys), [Aleksandra Okrój](https://https://github.com/aleksandraokroj)<br />
-In order to create some functionalities in this project we used Microsoft Tutorial: [click here](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application)<br />
+In order to create some functionalities in this project was used Microsoft Tutorials: [click here](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application)<br />
 
 **Database first project (Microsoft SQL Server Management Studio)** <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of **Scaffolding** in order to generate basic CRUD operations.<br />
-- **Client side validation of model (Models/Student.cs):**<br />
-![validation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel.PNG)<br />
-![validation2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel2.PNG)<br />
-![validation3](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel3.PNG)<br />
-![validation4](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModel4.PNG)<br />
-**- Results:**<br />
+
 ![validationResult](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult.PNG)<br />
 ![validationResult2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult2.PNG)<br />
 - Adjusted **range validator class** for a date of Birth entity in the model (**rangeValidator.cs**):<br />
