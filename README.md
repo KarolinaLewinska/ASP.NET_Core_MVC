@@ -7,14 +7,18 @@ In order to create some functionalities in this project was used Microsoft Tutor
 - Usage of **Scaffolding** in order to generate basic CRUD operations <br />
 - **Range validator class** for a date of Birth entity (**rangeValidator.cs**)<br />
 - Generating authentication DB via Package Console<br />
+
 **Validation results:**<br />
 **- register and my account views:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
+
 **- login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
+
 **StudentsController:**<br />
 **- sorting, filtering** functionalities:<br />
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
+
 **- paging (**Paging.cs**)** functionality:<br /><br />
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
 - session variable which informs about previously added/edited/deleted student’s data<br />
