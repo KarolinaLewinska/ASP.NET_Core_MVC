@@ -35,6 +35,7 @@ In order to create some functionalities in this project was used Microsoft Tutor
 - session variable which informs about previously edited student’s data<br />
 - try-catch error handling with dedicated page for error 404 <br />
 
+
 - **Delete Action (POST):**<br />
 - information via TempData about successfully deleted student’s data (visible on Index page)<br />
 - try-catch error handling with dedicated page for error 404<br />
