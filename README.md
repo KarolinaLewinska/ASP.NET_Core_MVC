@@ -1,27 +1,19 @@
 # ASP.NET Core MVC
-System for managing students’ fictional personal data.<br />
+System for managing students’ fictional personal data<br />
 In order to create some functionalities in this project was used Microsoft Tutorials: [click here](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application)<br />
 
 **Database first project (Microsoft SQL Server Management Studio)** <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of **Scaffolding** in order to generate basic CRUD operations.<br />
-
-![validationResult](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult.PNG)<br />
-![validationResult2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/validationModelResult2.PNG)<br />
-- Adjusted **range validator class** for a date of Birth entity in the model (**rangeValidator.cs**):<br />
-![rangeValidator](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/rangeValidator.PNG)<br />
-- Generating authentication DB via Package Console:<br />
-![authCommand](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authCommand.PNG)<br />
-- Adding Identity Configurations in **Sartup.cs**:<br />
-![AuthConfig](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authConfig.PNG)<br />
+- Adjusted **range validator class** for a date of Birth entity in the model (**rangeValidator.cs**)<br />
+- Generating authentication DB via Package Console<br />
 - **Results (with validation):**<br />
 **- register and my account views:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
 **- login view:**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 - **StudentsController:**<br />
-**- Authorize attribute** to unable access without authentication,<br />
-
+- 
 - **Index Action (GET):**<br />
 **- sorting, filtering** functionalities:<br />
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
@@ -47,12 +39,6 @@ In order to create some functionalities in this project was used Microsoft Tutor
 - information via TempData about successfully deleted student’s data (visible on Index page),<br />
 - try-catch error handling with dedicated pages for error 404.<br />
 
-- **HTTP statuses and session configuration in Startup.cs:**<br />
-![httpSessionConfig](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/httpSessConfig.PNG)<br />
-![httpSessionConfig2](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/httpSessConfig2.PNG)<br />
-- **Created own CSS style (master.css)**<br />
-
-- **Cross-Site Request Forgery security (AntiForgeryToken attribute)**<br />
 
 - **Views results:**<br />
 **- Index.cshml**<br />
