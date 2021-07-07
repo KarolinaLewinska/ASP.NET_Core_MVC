@@ -1,10 +1,8 @@
-# ASP.NET_MVC_Core_App
+# ASP.NET Core MVC
 System for managing students’ fictional personal data.<br />
 **Project created by:** [Karolina Lewińska](https://github.com/KarolinaLewinska), [Justyna Gapys](https://github.com/justynagapys), [Aleksandra Okrój](https://https://github.com/aleksandraokroj)<br />
 In order to create some functionalities in this project we used Microsoft Tutorial: [click here](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application)<br />
-**Architecture:** MVC<br />
-**Framwork:** .NET Core<br />
-**Language:** C#<br />
+
 **Database first project (Microsoft SQL Server Management Studio)** <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of **Scaffolding** in order to generate basic CRUD operations.<br />
