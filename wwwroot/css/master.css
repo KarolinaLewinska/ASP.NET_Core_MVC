@@ -1,38 +1,47 @@
 ﻿html, body {
     margin: 0;
     padding: 0;
-    font-family:Arial;
+    font-family: Arial;
 }
+
 html {
     height: 100%;
 }
+
 body, section {
     min-height: 100%;
     position: relative;
 }
+
 nav {
     background-color: #C6D8E6;
 }
+
 .btn-primary {
     background-color: #254055;
     color: white;
     border-color: #254055;
 }
+
 #profile, #emailProfile, #change-password, #personal-data {
     color: black;
 }
+
 #profile:visited, #emailProfile:visited, #change-password:visited, #personal-data:visited {
     background-color: #E2EBF3;
 }
+
 fieldset {
     padding: 20px;
     width: 100%;
     line-height: 1.8;
     background-color: #F0F0F0;
 }
+
 thead {
     background-color: #719EC1;
 }
+
 .footer {
     left: 0;
     bottom: 0;
@@ -41,15 +50,19 @@ thead {
     background-color: #C6D8E6;
     position: absolute;
 }
+
 thead, tbody, header, fieldset {
-    text-align:center;
+    text-align: center;
 }
+
 td {
-    font-weight:500;
+    font-weight: 500;
 }
+
 #headerLeft {
-    text-align:left;
+    text-align: left;
 }
+
 input[type="radio"]:checked:after {
     width: 17px;
     height: 17px;
@@ -63,21 +76,26 @@ input[type="radio"]:checked:after {
     visibility: visible;
     border: 2px solid white;
 }
+
 h5, #rbuttons, #noResults, #welcome, #navtext, #ftext, thead, 
 #profile, #emailProfile, #change-password, #personal-data, mark {
     font-weight: bold;
 }
+
 #links {
-    text-decoration:none;
-    color:black;
-    font-weight:normal;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
 }
+
 #b1 {
     width: 200px;
 }
+
 #b2 {
     width: 150px;
 }
+
 mark {
     font-size: large;
     background-color: #E2EBF3;

@@ -14,7 +14,7 @@ namespace StudentsDataSystem.Models
         public Paging(List<T> items, int count, int pageIndex, int pageSize)
         {
             PageIndex = pageIndex;
-            TotalPages = (int)Math.Ceiling(count / (double)pageSize);
+            TotalPages = (int) Math.Ceiling(count / (double) pageSize);
 
             this.AddRange(items);
         }

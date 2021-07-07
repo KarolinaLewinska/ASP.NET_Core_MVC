@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -70,7 +67,6 @@ namespace StudentsDataSystem.Areas.Identity.Pages.Account
             var user = await _userManager.FindByEmailAsync(Input.Email);
             if (user == null)
             {
-                // Don't reveal that the user does not exist
                 return RedirectToPage("./ResetPasswordConfirmation");
             }
 

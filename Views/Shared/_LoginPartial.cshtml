@@ -11,7 +11,7 @@
         </a>
     </li>
     <li class="nav-item">
-        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("LogOut", "Students", new { area = "" })">
             <button id="navtext" type="submit" class="nav-link btn btn-link text-dark" >
             <img  src="~/css/images/logout.png" width="35" height="35" class=" mr-2" />Wyloguj się</button>
         </form>

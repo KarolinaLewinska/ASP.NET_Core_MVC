@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -20,7 +21,7 @@ namespace StudentsDataSystem.Controllers
 
         public async Task<IActionResult> Index(string searchBy, string currentFilter, string search, string sortBy, int? pageNumber)
         {
-            ViewBag.Message = HttpContext.Session.GetString("SessionVar1");
+            ViewBag.Message = HttpContext.Session.GetString("SessionVar");
             ViewBag.CurrentSort = sortBy;
             ViewBag.sortBySurname = string.IsNullOrEmpty(sortBy) ? "surname_desc" : "";  
             ViewBag.sortByNames = sortBy == "names" ? "names_desc" : "names";
@@ -31,52 +32,41 @@ namespace StudentsDataSystem.Controllers
             ViewBag.sortBySemester = sortBy == "semester" ? "semester_desc" : "semester";
             ViewBag.sortByGroup = sortBy == "group" ? "group_desc" : "group";
             ViewBag.sortByIndex = sortBy == "studentIndex" ? "studentIndex_desc" : "studentIndex";
-
-            if (search != null)
-            {
-                pageNumber = 1;
-            }
-            else
-            {
-                search = currentFilter;
-            }
-
             ViewBag.currentFilter = search;
 
             var students = _context.Students.AsQueryable();
+            int pageSize = 20;
+
+            if (search != null)
+                pageNumber = 1;
+            else
+                search = currentFilter;
+            
 
             if (searchBy == "stype")
-            {
                 students = students.Where(s => s.studiesType.StartsWith(search) || search == null); 
-            }
+            
             else if (searchBy == "degree")
-            {
                 students = students.Where(s => s.degree.Equals(search) || search == null);
-            }
+            
             else if (searchBy == "field")
-            {
                 students = students.Where(s => s.fieldOfStudy.StartsWith(search) || search == null);
-            }
+            
             else if (searchBy == "specialization")
-            {
                 students = students.Where(s => s.specialization.StartsWith(search) || search == null);
-            }
+            
             else if (searchBy == "semester")
-            {
                 students = students.Where(s => s.semester.StartsWith(search) || search == null);
-            }
+            
             else if (searchBy == "group")
-            {
                 students = students.Where(s => s.studentsGroup.Contains(search) || search == null);
-            }
+          
             else if(searchBy == "studentIndex")
-            {
                 students = students.Where(s => s.studentIdNumber.StartsWith(search) || search == null);
-            }
+           
             else
-            {
                 students = students.Where(s => s.surname.StartsWith(search) || search == null);
-            }
+           
 
             switch (sortBy)
             {
@@ -135,12 +125,10 @@ namespace StudentsDataSystem.Controllers
                     students = students.OrderBy(s => s.surname);
                     break;
             }
-            int pageSize = 20;
-
+            
             return View(await Paging<Student>.CreateAsync(students.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
-     
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -149,8 +137,7 @@ namespace StudentsDataSystem.Controllers
                 return View("idNullError");
             }
 
-            var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.id == id);
+            var student = await _context.Students.FirstOrDefaultAsync(m => m.id == id);
 
             if (student == null)
             {
@@ -168,7 +155,7 @@ namespace StudentsDataSystem.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create( Student student)
+        public async Task<IActionResult> Create(Student student)
         {
             bool isEmailNotUnique = _context.Students.Any(x => x.email == student.email);
             bool isPhoneNumNotUnique = _context.Students.Any(x => x.phoneNumber == student.phoneNumber);
@@ -176,39 +163,38 @@ namespace StudentsDataSystem.Controllers
             bool isIndexNumNotUnique = _context.Students.Any(x => x.studentIdNumber == student.studentIdNumber);
 
             if (isEmailNotUnique)
-            {
-               ModelState.AddModelError("email", "Podany adres email istnieje już w bazie!");
-            }
+               ModelState.AddModelError("email", "Student o podanym adresie email już istnieje");
+            
             if (isPhoneNumNotUnique)
-            {
-                ModelState.AddModelError("phoneNumber", "Podany numer telefonu istnieje już w bazie!");
-            }
-            if (isPeselNotUnique)
-            {
-                ModelState.AddModelError("pesel", "Podany numer PESEL istnieje już w bazie!");
-            }
-            if (isIndexNumNotUnique)
-            {
-                ModelState.AddModelError("studentIdNumber", "Podany numer indexu istnieje już w bazie!");
-            }
+                ModelState.AddModelError("phoneNumber", "Student o podanym numerze telefonu już istnieje");
 
+            if (isPeselNotUnique)
+                ModelState.AddModelError("pesel", "Student o podanym numerze PESEL już istnieje");
+          
+            if (isIndexNumNotUnique)
+                ModelState.AddModelError("studentIdNumber", "Student o podanym numerze indeksu już istnieje");
+           
             try
             {
                 if (ModelState.IsValid)
                 {
                     _context.Add(student);
                     await _context.SaveChangesAsync();
+                    
                     TempData["Message"] = "Dane studenta: " + student.names + " " + student.surname + " zostały pomyślnie dodane do bazy";
+                    
                     var names = student.names;
                     var surname = student.surname;
-                    HttpContext.Session.SetString("SessionVar1", "Ostatnio dodano dane studenta: " + names + " " + surname);
+                    
+                    HttpContext.Session.SetString("SessionVar", "Ostatnio dodano dane studenta: " + names + " " + surname);
                     return RedirectToAction(nameof(Create));
                 }
             }
-            catch (System.Data.DataException)
+            catch (Exception exc)
             {
-                ModelState.AddModelError("", "Nie udało się dodać danych. Spróbuj ponownie");
+                return View("Error");
             };
+
             return View(student);
         }
 
@@ -226,6 +212,7 @@ namespace StudentsDataSystem.Controllers
                 Response.StatusCode = 404;
                 return View("StudentNotFound", id.Value);
             }
+
             return View(student);
         }
 
@@ -245,22 +232,17 @@ namespace StudentsDataSystem.Controllers
             bool isIndexNumNotUnique = _context.Students.Any(x => x.studentIdNumber == student.studentIdNumber && x.id != id);
 
             if (isEmailNotUnique)
-            {
                 ModelState.AddModelError("email", "Podany adres email istnieje już w bazie!");
-            }
+        
             if (isPhoneNumNotUnique)
-            {
                 ModelState.AddModelError("phoneNumber", "Podany numer telefonu istnieje już w bazie!");
-            }
+     
             if (isPeselNotUnique)
-            {
                 ModelState.AddModelError("pesel", "Podany numer PESEL istnieje już w bazie!");
-            }
+          
             if (isIndexNumNotUnique)
-            {
                 ModelState.AddModelError("studentIdNumber", "Podany numer indexu istnieje już w bazie!");
-            }
-
+          
             if (ModelState.IsValid)
             {
                 try
@@ -269,21 +251,18 @@ namespace StudentsDataSystem.Controllers
                     await _context.SaveChangesAsync();
                     TempData["Message"] = "Edycja danych studenta: " + student.names + " " + student.surname + " przebiegła pomyślnie";
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception exc)
                 {
                     if (!StudentExists(student.id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                        return View("StudentNotFound", student.id);
+                    
+                    return View("Error");
                 }
 
                 var names = student.names;
                 var surname = student.surname;
-                HttpContext.Session.SetString("SessionVar1", "Ostatnio zaktualizowano dane studenta: " + names + " " + surname);
+                
+                HttpContext.Session.SetString("SessionVar", "Ostatnio zaktualizowano dane studenta: " + names + " " + surname);
                 return RedirectToAction(nameof(Edit));
             }
             return View(student);
@@ -297,8 +276,7 @@ namespace StudentsDataSystem.Controllers
                 return View("idNullError");
             }
 
-            var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.id == id);
+            var student = await _context.Students.FirstOrDefaultAsync(m => m.id == id);
             if (student == null)
             {
                 Response.StatusCode = 404;
@@ -317,13 +295,15 @@ namespace StudentsDataSystem.Controllers
                 Student studentToDelete = new Student { id = id };
                 _context.Entry(studentToDelete).State = EntityState.Deleted;
                 await _context.SaveChangesAsync();
+                
                 TempData["Message"] = "Dane studenta zostały usunięte";
+                
                 return RedirectToAction(nameof(Index));
             }
 
-            catch (DbUpdateException)
+            catch (Exception exc)
             {
-                return RedirectToAction("Delete", new { id = id, saveChangesError = true });
+                return View("Error");
             }
         }
 
