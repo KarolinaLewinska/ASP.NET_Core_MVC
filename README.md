@@ -33,7 +33,7 @@ In order to create some functionalities in this project was used Microsoft Tutor
 - server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number)<br />
 - information via TempData about successfully edited student’s data<br />
 - session variable which informs about previously edited student’s data<br />
-- try-catch error handling with dedicated page for error 404 <br />
+- try-catch error handling with dedicated page for error 404 <br /><br />
 
 
 - **Delete Action (POST):**<br />
