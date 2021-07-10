@@ -24,7 +24,7 @@ namespace StudentsDataSystem.Models
 
         [DisplayName("Data urodzenia")]
         [Required(ErrorMessage = "Pole jest wymagane")]
-        [DateRange(ErrorMessage = "Nieprawidłowy zakres daty!")]
+        [DateRange(ErrorMessage = "Nieprawidłowy zakres daty")]
         [DisplayFormat(DataFormatString = "{0: dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
         public DateTime dateOfBirth { get; set; }
@@ -47,14 +47,14 @@ namespace StudentsDataSystem.Models
         [Required(ErrorMessage = "Pole jest wymagane")]
         [StringLength(11)]
         [RegularExpression(@"^[0-9]{11}$",
-        ErrorMessage = "Numer PESEL musi się składać jedynie z 11 cyfr!")]
+        ErrorMessage = "Numer PESEL musi się składać jedynie z 11 cyfr")]
         public String pesel { get; set; }
 
         [DisplayName("Numer telefonu")]
         [Required(ErrorMessage = "Pole jest wymagane")]
         [StringLength(9)]
         [RegularExpression(@"^[0-9]{9}$",
-        ErrorMessage = "Numer telefonu musi się składać jedynie z 9 cyfr!")]
+        ErrorMessage = "Numer telefonu musi się składać jedynie z 9 cyfr")]
         public String phoneNumber { get; set; }
         
         [DisplayName("Adres e-mail")]
@@ -99,7 +99,7 @@ namespace StudentsDataSystem.Models
         [Required(ErrorMessage = "Pole jest wymagane")]
         [StringLength(6)]
         [RegularExpression(@"^[0-9]{6}$",
-        ErrorMessage = "Numer indeksu musi się składać jedynie z 6 cyfr!")]
+        ErrorMessage = "Numer indeksu musi się składać jedynie z 6 cyfr")]
         public String studentIdNumber { get; set; }
 
         [DisplayName("Stypendium")]
