@@ -5,7 +5,7 @@ In order to create some functionalities in this project was used Microsoft Tutor
 - **Database first project** <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of **Scaffolding** in order to generate basic CRUD operations <br />
-- **Range validator class** for a date of Birth entity (**rangeValidator.cs**)<br />
+- **Range validator class** for a date of birth entity (**rangeValidator.cs**)<br />
 - Generating authentication DB via Package Console<br />
 
 **Validation results:**<br />
