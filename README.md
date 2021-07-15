@@ -1,5 +1,5 @@
 # ASP.NET Core MVC
-Other Authors: [Justyna Gapys](https://github.com/justynagapys), [Aleksandra Okrój](https://github.com/aleksandraokroj)<br />
+The other co-authors: [Justyna Gapys](https://github.com/justynagapys), [Aleksandra Okrój](https://github.com/aleksandraokroj)<br />
 System for managing students’ fictional personal data<br />
 In order to create some functionalities in this project was used Microsoft Tutorials: [click here](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application)<br />
 
@@ -59,7 +59,3 @@ In order to create some functionalities in this project was used Microsoft Tutor
 
 **- Index.cshtml (HomeController) – showing after logout from system**<br />
 ![LogoutView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/logoutPage.PNG)<br />
-
-
-
-
