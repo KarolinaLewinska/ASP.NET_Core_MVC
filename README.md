@@ -3,20 +3,20 @@ The other co-authors: [Justyna Gapys](https://github.com/justynagapys), [Aleksan
 System for managing students’ fictional personal data.<br />
 In order to create some functionalities in this project was used [Microsoft Tutorials](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application).<br />
 
-## Database first project** <br />
+## Database first project <br />
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of **Scaffolding** in order to generate basic CRUD operations, <br />
 - **Range validator class** for a date of birth entity (**rangeValidator.cs**),<br />
 - Generating authentication DB via Package Console.<br />
 
-## Validation results:**<br />
+## Validation results<br />
 **- Register and my account views,**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
 
 **- Login view,**<br />
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 
-## StudentsController:**<br />
+## StudentsController<br />
 **- Sorting, filtering** functionalities,<br />
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
 
@@ -41,7 +41,7 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 - Information via TempData about successfully deleted student’s data (visible on Index page),<br />
 - Try-catch error handling with dedicated page for error 404,<br />
 
-## Views:**<br />
+## Views<br />
 **- Index.cshml**<br />
 ![IndexView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/IndexView.PNG)<br />
 
