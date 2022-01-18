@@ -19,7 +19,6 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 ## StudentsController<br />
 - Sorting, filtering functionalities,<br />
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
-
 - Paging (Paging.cs) functionality,<br /><br />
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
 - Session variable which informs about previously added/edited/deleted student’s data,<br />
@@ -30,32 +29,31 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 - Try-catch error handling with dedicated page for error 404,<br />
 ![errorsViews](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/errorView.PNG)<br />
 
-- **Edit Action (POST):**<br />
+### Edit Action (POST)
 - Server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
 - Information via TempData about successfully edited student’s data,<br />
 - Session variable which informs about previously edited student’s data,<br />
 - Try-catch error handling with dedicated page for error 404,<br /><br />
 
-- **Delete Action (POST):**<br />
+### Delete Action (POST)
 - Information via TempData about successfully deleted student’s data (visible on Index page),<br />
 - Try-catch error handling with dedicated page for error 404,<br />
 
-## Views<br />
-### Index.cshml<br />
+## Views
+### Index.cshml
 ![IndexView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/IndexView.PNG)<br />
 
-### Create.cshtml<br />
+### Create.cshtml
 ![CreateView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/CreateView.PNG)<br />
 
-### Edit.cshtml<br />
+### Edit.cshtml
 ![EditView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/EditView.PNG)<br />
 
 ### Details.cshtml
 ![DetailsView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/DetailsView.PNG)<br />
 
-### Delete.cshtml<br />
+### Delete.cshtml
 ![DeleteView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/DeleteView.PNG)<br />
 
-### Index.cshtml (HomeController) 
-– showing after logout from system,<br />
+### Index.cshtml (HomeController - after logout) 
 ![LogoutView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/logoutPage.PNG)<br />
