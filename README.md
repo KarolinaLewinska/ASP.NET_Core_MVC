@@ -10,17 +10,18 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 - Generating authentication DB via Package Console.<br />
 
 ## Validation results<br />
-- Register and my account views,<br />
+### Register, My Account
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
 
-- Login view,<br />
+### Login
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 
 ## StudentsController<br />
-- Sorting, filtering functionalities,<br />
+### Sorting, filtering 
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
-- Paging (Paging.cs) functionality,<br /><br />
+### Paging (Paging.cs)
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
+### Session
 - Session variable which informs about previously added/edited/deleted student’s data,<br />
 - Server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
 ![serverValidation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/serverValidation.PNG)<br /><br />
@@ -28,13 +29,11 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 - Session variable informing about previously added student’s data,<br />
 - Try-catch error handling with dedicated page for error 404,<br />
 ![errorsViews](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/errorView.PNG)<br />
-
 ### Edit Action (POST)
 - Server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
 - Information via TempData about successfully edited student’s data,<br />
 - Session variable which informs about previously edited student’s data,<br />
 - Try-catch error handling with dedicated page for error 404,<br /><br />
-
 ### Delete Action (POST)
 - Information via TempData about successfully deleted student’s data (visible on Index page),<br />
 - Try-catch error handling with dedicated page for error 404,<br />
