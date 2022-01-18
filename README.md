@@ -24,7 +24,7 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
 - Session variable which informs about previously added/edited/deleted student’s data,<br />
 - Server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
-![serverValidation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/serverValidation.PNG)<br />
+![serverValidation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/serverValidation.PNG)<br /><br />
 - Information via TempData about successfully added student’s data,<br />
 - Session variable informing about previously added student’s data,<br />
 - Try-catch error handling with dedicated page for error 404,<br />
