@@ -1,5 +1,5 @@
 # ASP.NET Core MVC
-The other co-authors: [Justyna Gapys](https://github.com/justynagapys), [Aleksandra Okrój](https://github.com/aleksandraokroj)<br />
+The other co-authors: [Justyna Gapys](https://github.com/justynagapys), [Aleksandra Okrój](https://github.com/aleksandraokroj).<br />
 System for managing students’ fictional personal data.<br />
 In order to create some functionalities in this project was used [Microsoft Tutorials](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application).<br />
 
