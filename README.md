@@ -1,26 +1,26 @@
 # ASP.NET Core MVC
-**Co-authors:** <br/>
-[Justyna Gapys](https://github.com/justynagapys) <br/>
-[Aleksandra Okrój](https://github.com/aleksandraokroj) <br/>
+**Co-authors:**<br />
+[Justyna Gapys](https://github.com/justynagapys)<br />
+[Aleksandra Okrój](https://github.com/aleksandraokroj)<br />
 
 # Description
 System for managing students’ fictional personal data.<br />
 In order to create some functionalities in this project was used [Microsoft Tutorials](https://docs.microsoft.com/pl-pl/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application).<br />
 
-## Database first project <br />
+## Database first project
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of Scaffolding in order to generate basic CRUD operations, <br />
 - Range validator class for a date of birth entity (rangeValidator.cs),<br />
 - Generating authentication DB via Package Console.<br />
 
-## Validation results<br />
+## Validation results
 ### Register, My Account
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
 
 ### Login
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 
-## StudentsController<br />
+## StudentsController
 ### Sorting, filtering 
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
 ### Paging (Paging.cs)
