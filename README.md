@@ -1,7 +1,7 @@
 # ASP.NET Core MVC
-**Co-authors:** < br/>
-[Justyna Gapys](https://github.com/justynagapys)< br/> 
-[Aleksandra Okrój](https://github.com/aleksandraokroj)<br />
+**Co-authors:** <br/>
+[Justyna Gapys](https://github.com/justynagapys) <br/>
+[Aleksandra Okrój](https://github.com/aleksandraokroj) <br/>
 
 # Description
 System for managing students’ fictional personal data.<br />
