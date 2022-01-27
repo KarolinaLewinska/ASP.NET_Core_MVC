@@ -1,5 +1,5 @@
 # ASP.NET Core MVC
-**Co-authors:**< br/>
+**Co-authors:** < br/>
 [Justyna Gapys](https://github.com/justynagapys)< br/> 
 [Aleksandra Okrój](https://github.com/aleksandraokroj)<br />
 
