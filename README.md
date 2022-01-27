@@ -13,19 +13,19 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 - Range validator class for a date of birth entity (rangeValidator.cs),<br />
 - Generating authentication DB via Package Console.<br />
 
-## Validation results
-### Register, My Account
+# Validation results
+## Register, My Account
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/authViews.PNG)<br />
 
-### Login
+## Login
 ![registerMyAccount](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/loginViews.PNG)<br />
 
-## StudentsController
-### Sorting, filtering 
+# StudentsController
+## Sorting, filtering 
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
-### Paging (Paging.cs)
+## Paging (Paging.cs)
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
-### Session
+## Session
 - Session variable which informs about previously added/edited/deleted student’s data,<br />
 - Server-side validaton for uniqueness of data (email, phone numer, PESEL, student ID number),<br />
 ![serverValidation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/serverValidation.PNG)<br /><br />
@@ -34,21 +34,21 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 - Try-catch error handling with dedicated page for error 404,<br />
 ![errorsViews](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/errorView.PNG)<br />
 
-## Views
-### Index.cshml
+# Views
+## Index.cshml
 ![IndexView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/IndexView.PNG)<br />
 
-### Create.cshtml
+## Create.cshtml
 ![CreateView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/CreateView.PNG)<br />
 
-### Edit.cshtml
+## Edit.cshtml
 ![EditView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/EditView.PNG)<br />
 
-### Details.cshtml
+## Details.cshtml
 ![DetailsView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/DetailsView.PNG)<br />
 
-### Delete.cshtml
+## Delete.cshtml
 ![DeleteView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/DeleteView.PNG)<br />
 
-### Index.cshtml (HomeController - after logout) 
+## Index.cshtml (HomeController - after logout) 
 ![LogoutView](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/logoutPage.PNG)<br />
