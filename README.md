@@ -10,7 +10,7 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 ### Database first project
 ![DB](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/Db.PNG)<br />
 - Usage of Scaffolding in order to generate basic CRUD operations, <br />
-- Range validator class for a date of birth entity (rangeValidator.cs),<br />
+- Range validator class for a date of birth entity,<br />
 - Generating authentication DB via Package Console.<br />
 
 ## Validation results
@@ -23,7 +23,7 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 ## StudentsController
 ### Sorting, filtering 
 ![searchSort](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/searchView.PNG)<br /><br />
-### Paging (Paging.cs)
+### Paging
 ![paging](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/pagingView.PNG)<br />
 ### Session
 - Session variable which informs about previously added/edited/deleted student’s data,<br />
@@ -31,7 +31,7 @@ In order to create some functionalities in this project was used [Microsoft Tuto
 ![serverValidation](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/serverValidation.PNG)<br /><br />
 - Information via TempData about successfully added student’s data,<br />
 - Session variable informing about previously added student’s data,<br />
-- Try-catch error handling with dedicated page for error 404,<br />
+- Try-catch error handling with dedicated page for error 404.<br />
 ![errorsViews](https://github.com/KarolinaLewinska/ASP.NET_MVC_Core_App/blob/master/ReadmeImages/errorView.PNG)<br />
 
 ## Views
